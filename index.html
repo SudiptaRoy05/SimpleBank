@@ -11,7 +11,7 @@
 <body>
     
 
-    <div class="loginArea">
+    <div id="loginArea">
         <h1 class="bank-title text-center">Welcome to the bank</h1>
         <div class="submitArea">
             <h3 class="pb-1">Login</h3>
@@ -19,9 +19,48 @@
             <br>
             <input type="password" name="" id="" class="form-control" placeholder="Password">
             <br>
-            <button class="btn btn-success">Login</button>
+            <button id="loginButton" class="btn btn-success">Login</button>
         </div>
     </div>
 
+    <div id="transactionArea">
+       
+        <div class="row">
+            <div class="col-md-4">
+                <div class="deposit status">
+                    <h5>Deposit</h5>
+                    <h2>$00</h2>
+                </div>
+                
+            </div>
+            <div class="col-md-4">
+                <div class="withdraw status">
+                    <h5>Withdraw</h5>
+                    <h2>$00</h2>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="balance status">
+                    <h5>Balance</h5>
+                    <h2>$1200</h2>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const loginBtn = document.getElementById('loginButton');
+        loginBtn.addEventListener('click',function(){
+            const loginAreas = document.getElementById('loginArea');
+            loginAreas.style.display = 'none';
+
+            const transactionAreas = document.getElementById('transactionArea');
+            transactionAreas.style.display = 'block';
+        });
+
+        
+
+    </script>
 </body>
 </html>
