@@ -34,7 +34,9 @@
  const withdrawBtn = document.getElementById("addWithdraw");
  withdrawBtn.addEventListener('click',function(){
     const withdrawNumber = getInputNumber('withdrawAmounts');
-    console.log(withdrawNumber);
+    updateSpanText('currentWithdraw', withdrawNumber);
+    updateSpanText('currentBalance',-1*withdrawNumber);
+    document.getElementById('withdrawAmounts').value = "";
  });
 
  function getInputNumber(id){
